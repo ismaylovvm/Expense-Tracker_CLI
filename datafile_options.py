@@ -13,7 +13,7 @@ def get_database():
     
     else:
         with open(DATA_FILE,"r","utf-8") as file:
-            json.load(file)
+            return json.load(file)
 
 
 def write_database(expenses):
