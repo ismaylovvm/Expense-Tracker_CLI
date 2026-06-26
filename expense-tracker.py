@@ -40,7 +40,15 @@ if arguments[1] == "add":
 
     datafile =  datafile_options.get_database()
 
-    curr_id = len(datafile) + 1
+    if len(datafile) == 0:
+        curr_id = 1
+    else:
+        max = 0
+        for data in datafile:
+            if data["ID"] > max:
+                max = data["ID"]
+        curr_id = max + 1
+
 
     new_expense = expense(curr_id,cmd,dscpt,amt).get_dict()
 
@@ -80,8 +88,8 @@ elif arguments[1] == "summary":
     else:
 
         for exp in datafile:
-            sumofexp += exp["Amount"]
-        print("Total expenses: ${sumofexp}")
+            sumofexp += float(exp["Amount"])
+        print(f"Total expenses: ${sumofexp}")
         flag = 1
 
     if flag == 0:
