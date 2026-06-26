@@ -107,7 +107,7 @@ elif arguments[1] == "update":
 
     for data in datafile:
         if data["ID"] == int(req_id):
-            data["Amount"] = arguments[4]
+            data["Amount"] = arguments[5]
             flag = 1
     datafile_options.write_database(datafile)
 
