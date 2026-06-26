@@ -10,11 +10,12 @@ A simple, modular command-line interface (CLI) application to manage personal fi
 * **List Expenses:** View a formatted list of all recorded expenses.
 * **Expense Summary:** View the total sum of all expenses.
 * **Monthly Summary:** View the total expenses for a specific month.
+* **Export to CSV:** Export all recorded expenses into a structured CSV file for external analysis.
 * **Persistent Storage:** Data is automatically saved and retrieved from `expens.json`.
 
 ## Project Structure
 
-* `main.py`: The entry point of the application containing the CLI argument parsing and core logic.
+* `expense-tracker.py`: The entry point of the application containing the CLI argument parsing and core logic.
 * `datafile_options.py`: A separate module handling database operations (reading/writing JSON files) for better modularity.
 * `expens.json`: The database file where expense records are stored (automatically generated).
 
@@ -22,34 +23,34 @@ A simple, modular command-line interface (CLI) application to manage personal fi
 
 * Python 3.x
 
-No external libraries are required. The project relies entirely on Python's standard library (`sys`, `json`, `os`, `datetime`).
+No external libraries are required. The project relies entirely on Python's standard library (`sys`, `json`, `os`, `datetime`, `csv`).
 
 ## Usage
 
 Run the application through your terminal or command prompt using the `python` command.
 
 ### 1. Add an Expense
-    python main.py add --description "Lunch" --amount 20
+    python expense-tracker.py add --description "Lunch" --amount 20
 
 ### 2. List All Expenses
-    python main.py list
+    python expense-tracker.py list
 
 *Output Example:*
     #        ID           Date           Description           Amount
     # 1  2024-08-06  Lunch  20
 
 ### 3. Update an Expense
-    python main.py update --id 1 --amount 25
+    python expense-tracker.py update --id 1 --amount 25
 
 ### 4. Delete an Expense
-    python main.py delete --id 1
+    python expense-tracker.py delete --id 1
 
 ### 5. View Summary (All)
-    python main.py summary
+    python expense-tracker.py summary
 
 ### 6. View Summary (By Month)
 *(Example for August - 8th month)*
-    python main.py summary --month 8
+    python expense-tracker.py summary --month 8
 
-## Author
-**Məhəmməd İsmayılzadə**
+### 7. Export Expenses to CSV
+    python expense-tracker.py csv
