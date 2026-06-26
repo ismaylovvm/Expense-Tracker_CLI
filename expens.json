@@ -1,0 +1,30 @@
+[
+     {
+          "ID": 1,
+          "Command": "add",
+          "Description": "Dinner",
+          "Amount": "20",
+          "Date": "2026-06-27"
+     },
+     {
+          "ID": 2,
+          "Command": "add",
+          "Description": "Electric",
+          "Amount": "10",
+          "Date": "2026-06-27"
+     },
+     {
+          "ID": 3,
+          "Command": "add",
+          "Description": "Tennis",
+          "Amount": "30",
+          "Date": "2026-06-27"
+     },
+     {
+          "ID": 4,
+          "Command": "add",
+          "Description": "Electric",
+          "Amount": "10",
+          "Date": "2026-06-27"
+     }
+]

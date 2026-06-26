@@ -137,6 +137,13 @@ elif arguments[1] == "delete":
         print("Cannot find ID")
         sys.exit(1)
 
+elif arguments[1] == "csv":
+
+        datafile_options.json_to_csv()
+
+
+
+
 
 
 
