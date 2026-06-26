@@ -89,7 +89,25 @@ elif arguments[1] == "summary":
         sys.exit(1)
 
 
+elif arguments[1] == "update":
 
+    req_id = arguments[3]
+
+    datafile = datafile_options.get_database()
+
+    flag = 0
+
+    for data in datafile:
+        if data["ID"] == int(req_id):
+            data["Amount"] = arguments[4]
+            flag = 1
+    datafile_options.write_database(datafile)
+
+    if flag == 0:
+        print("Cannot find ID")
+        sys.exit(1)
+
+    
 
 
         
